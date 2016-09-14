@@ -45,6 +45,7 @@ enum {
 
 typedef enum {
     HMSegmentedControlTypeText,
+    HMSegmentedControlTypeTextBackground,
     HMSegmentedControlTypeImages,
 	HMSegmentedControlTypeTextImages
 } HMSegmentedControlType;
@@ -54,6 +55,7 @@ typedef enum {
 @property (nonatomic, strong) NSArray *sectionTitles;
 @property (nonatomic, strong) NSArray *sectionImages;
 @property (nonatomic, strong) NSArray *sectionSelectedImages;
+@property (nonatomic, strong) UIColor *sectionSelectedBackgroundColor;
 
 /**
  Provide a block to be executed when selected index is changed.
