@@ -90,8 +90,8 @@
     if (self) {
         [self commonInit];
         self.sectionTitles = sectiontitles;
-	self.sectionSelectedBackgroundColor = color;
-        self.type = HMSegmentedControlTypeText;
+        self.sectionSelectedBackgroundColor = color;
+        self.type = HMSegmentedControlTypeTextBackground;
     }
     
     return self;
@@ -395,7 +395,7 @@
             titleLayer.truncationMode = kCATruncationEnd;
             titleLayer.string = [self attributedTitleAtIndex:idx];
             titleLayer.contentsScale = [[UIScreen mainScreen] scale];
-	    titleLayer.backgroundColor = self.sectionSelectedBackgroundColor.CGColor
+            titleLayer.backgroundColor = self.sectionSelectedBackgroundColor.CGColor;
             
             [self.scrollView.layer addSublayer:titleLayer];
             
@@ -960,3 +960,4 @@
 }
 
 @end
+
